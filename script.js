@@ -7,7 +7,7 @@ const imgs = ['html.png',
 'css.png'];
 
 
-let main = document.getElementById('main');
+let main = document.querySelector('main');
 let allDivs =document.getElementsByTagName('div');
 
     function draw(){
@@ -45,6 +45,8 @@ for(let i=0; i<allDivs.length; i++){
          one = false ;
          
          setTimeout(checkImg,1000);
+         
+         //setTimeout(function(){alert("Hello");}3000);
 
 
           
