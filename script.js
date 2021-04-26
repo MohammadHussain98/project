@@ -7,7 +7,7 @@ const imgs = ['html.png',
 'css.png'];
 
 
-let main = document.querySelector('main');
+let main = document.getElementById('main');
 let allDivs =document.getElementsByTagName('div');
 
     function draw(){
@@ -20,8 +20,6 @@ draw();
 draw();
 
 
-
-
 let one = true;
 let  arr = [];
 
@@ -30,6 +28,7 @@ for(let i=0; i<allDivs.length; i++){
     allDivs[i].addEventListener('click',function(){
         if(one){
      this.firstChild.style.opacity = 1;
+    
 
      if(arr.length ==0){
          arr[0]= this;
@@ -46,10 +45,7 @@ for(let i=0; i<allDivs.length; i++){
          
          setTimeout(checkImg,1000);
          
-         //setTimeout(function(){alert("Hello");}3000);
-
-
-          
+         //setTimeout(function(){alert("Hello");}3000);     
      }
 
    }else
@@ -58,9 +54,9 @@ for(let i=0; i<allDivs.length; i++){
 
 
 
-    
+
     function checkImg(){
-        console.log("ok")
+      
     if(arr[0].firstChild.getAttribute('src') == arr[1].firstChild.getAttribute('src')){
         alert('ok')
     }else{
@@ -68,7 +64,7 @@ for(let i=0; i<allDivs.length; i++){
         arr[1].firstChild.style.opacity = 0 ;
 
     }
-    arr = [];
+    arr = [];  
     one = true;
 
    }
